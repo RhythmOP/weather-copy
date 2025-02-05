@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Enter city name">
+                <button class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.5 3C13.1 3 16 5.9 16 9.5c0 1.3-.4 2.5-1 3.5l4.9 4.9-1.4 1.4-4.9-4.9c-1 .6-2.2 1-3.5 1C5.9 16 3 13.1 3 9.5S5.9 3 9.5 3zm0 2C7 5 5 7 5 9.5S7 14 9.5 14s4.5-2 4.5-4.5S12 5 9.5 5z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="weather loading">
+                <h2 class="city">Weather in Kanpur</h2>
+                <h1 class="temp">51°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="Weather Icon" class="icon">
+                    <div class="description">Cloudy</div>
+                </div>
+                <div class="details">
+                    <div class="humidity detail">
+                        <span class="label">Humidity:</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%;"></div>
+                        </div>
+                        <span class="value">60%</span>
+                    </div>
+                    <div class="wind detail">
+                        <span class="label">Wind Speed:</span>
+                        <span class="badge wind">6.2 km/h</span>
+                    </div>
+                    <div class="uv-index detail">
+                        <span class="label">UV Index:</span>
+                        <span class="badge uv moderate">Moderate</span>
+                    </div>
+                    <div class="air-quality detail">
+                        <span class="label">Air Quality Index:</span>
+                        <span class="badge aqi good">Good</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h3>7-Day Forecast</h3>
+                <div class="forecast-container">
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

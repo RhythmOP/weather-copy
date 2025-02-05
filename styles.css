@@ -1,0 +1,269 @@
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Card with Glassmorphism Effect */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Search Section */
+.search {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Weather Display */
+.weather {
+  transition: opacity 0.3s ease;
+}
+
+.city {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.description {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+/* Weather Details */
+.details {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Progress Bar for Humidity */
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Badges for Wind, UV, AQI */
+.badge {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.badge.wind {
+  background: #00d4ff;
+}
+
+.badge.uv {
+  background: #ffcc00;
+}
+
+.badge.aqi {
+  background: #4caf50;
+}
+
+/* UV Index Specific Colors */
+.badge.uv.low {
+  background: #4caf50;
+}
+
+.badge.uv.moderate {
+  background: #ffcc00;
+}
+
+.badge.uv.high {
+  background: #ff5722;
+}
+
+.badge.uv.very-high {
+  background: #d32f2f;
+}
+
+/* AQI Specific Colors */
+.badge.aqi.good {
+  background: #4caf50;
+}
+
+.badge.aqi.moderate {
+  background: #ffeb3b;
+}
+
+.badge.aqi.poor {
+  background: #ff9800;
+}
+
+.badge.aqi.unhealthy {
+  background: #f44336;
+}
+
+.badge.aqi.hazardous {
+  background: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .card {
+    padding: 1.5rem;
+  }
+  .temp {
+    font-size: 2.5rem;
+  }
+  .search-bar {
+    font-size: 0.9rem;
+  }
+}
+/* ... (Your existing CSS styles) ... */
+
+.forecast {
+    margin-top: 2rem; /* Space between current weather and forecast */
+    text-align: left; /* Align forecast text to the left */
+}
+
+.forecast h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.forecast-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 1rem; /* Space between forecast days */
+    padding-bottom: 1rem; /* Add some padding at the bottom */
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100px; /* Adjust width as needed */
+    text-align: center;
+    color: #fff;
+    flex-shrink: 0; /* Prevent days from shrinking */
+}
+
+.forecast-day .forecast-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto; /* Center the icon */
+}
+
+.forecast-day .forecast-temp {
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+.forecast-day .forecast-date {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+
+}
